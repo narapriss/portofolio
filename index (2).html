@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portofolio Devya</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        background: linear-gradient(to bottom, #f6c1d3, #f3a6c3);
+        color: #8b3f57;
+      }
+
+      /* ================= NAVBAR ================= */
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 25px 70px;
+        background: #f4b3c9;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 35px;
+        font-weight: 600;
+      }
+
+      nav ul {
+        display: flex;
+        list-style: none;
+        gap: 35px;
+        font-weight: 600;
+      }
+
+      /* GARIS DI BAWAH MENU */
+      nav ul li {
+        position: relative;
+        cursor: pointer;
+      }
+
+      nav ul li::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -5px;
+        width: 0;
+        height: 3px;
+        background: #8b3f57;
+        border-radius: 10px;
+        transition: 0.3s;
+      }
+
+      nav ul li:hover::after {
+        width: 100%;
+      }
+
+      /* ================= HERO ================= */
+      .hero {
+        background-image: url(bg.jpeg);
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 100px 0;
+      }
+
+      .hero-images {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      .hero-images img {
+        width: 250px;
+        height: auto; /* supaya tinggi menyesuaikan */
+        border-radius: 25px;
+        object-fit: contain; /* supaya tidak terpotong */
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .hero-text button {
+        background: #c96486;
+        border: none;
+        padding: 12px 35px;
+        color: white;
+        border-radius: 25px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+
+      /* ================= MAIN GRID ================= */
+      .container {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr 0.8fr;
+        grid-template-areas:
+          "tentang hard hard"
+          "soft hard hard"
+          "project1 project2 penutup";
+        gap: 25px;
+        padding: 50px 70px;
+      }
+
+      nav ul li a {
+        text-decoration: none;
+        color: #8b3f57;
+      }
+
+      /* ================= CARD STYLE ================= */
+      .card {
+        background: #f8d2df;
+        padding: 25px;
+        border-radius: 25px;
+      }
+
+      /* GRID AREA */
+      .tentang {
+        grid-area: tentang;
+      }
+      .hard {
+        grid-area: hard;
+      }
+      .soft {
+        grid-area: soft;
+      }
+      .project1 {
+        grid-area: project1;
+      }
+      .project2 {
+        grid-area: project2;
+      }
+      .penutup {
+        grid-area: penutup;
+      }
+
+      /* INFO BOX */
+      .info-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .info-box {
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+        font-size: 14px;
+      }
+
+      /* HARD SKILLS */
+      .skill {
+        background: white;
+        padding: 18px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        font-weight: 600;
+      }
+
+      /* SOFT SKILLS */
+      .soft-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .soft-item {
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+      }
+
+      /* PROJECT */
+      .project-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 kolom */
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .project-grid img {
+        width: 100%;
+        height: 180px; /* tinggi tetap untuk semua foto */
+        border-radius: 15px;
+        object-fit: cover; /* foto otomatis crop sesuai frame */
+      }
+
+      .judul-tentang {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .icon-tentang {
+        width: 30px;
+        height: 30px;
+        object-fit: cover;
+        border-radius: 8px; /* bisa diganti 50% kalau mau bulat */
+      }
+
+      .info-box {
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+        font-size: 14px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .icon-info {
+        width: 20px;
+        height: 20px;
+        object-fit: cover;
+      }
+
+      .soft-item {
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .icon-soft {
+        width: 22px;
+        height: 22px;
+        object-fit: cover;
+      }
+
+      .judul-soft {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .icon-judul-soft {
+        width: 28px;
+        height: 28px;
+        object-fit: cover;
+      }
+
+      .icon-hard {
+        width: 22px;
+        height: 22px;
+        object-fit: cover;
+      }
+
+      .judul-hard {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .icon-judul-hard {
+        width: 28px;
+        height: 28px;
+        object-fit: cover;
+      }
+
+      .skill {
+        background: white;
+        padding: 18px;
+        border-radius: 15px;
+        margin-bottom: 15px;
+        font-weight: 600;
+
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .icon-skill {
+        width: 24px;
+        height: 24px;
+        object-fit: contain;
+      }
+
+      .project2 .project-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* 2 kolom */
+        gap: 15px;
+        margin-top: 20px;
+      }
+
+      .project2 .project-grid img {
+        width: 100%;
+        height: 180px; /* tinggi sama dengan Project Kiri */
+        border-radius: 15px;
+        object-fit: cover; /* otomatis crop foto */
+      }
+
+      .judul-project {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .icon-judul-project {
+        width: 28px;
+        height: 28px;
+        object-fit: cover;
+      }
+
+      .penutup-foto {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.penutup-foto img {
+  width: 180px;        /* bisa disesuaikan */
+  height: 180px;
+  border-radius: 25px; /* bisa bulat: 50% */
+  object-fit: cover;
+}
+
+      .judul-penutup {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+      }
+
+      .icon-judul-penutup {
+        width: 28px;
+        height: 28px;
+        object-fit: cover;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- NAVBAR -->
+    <nav>
+      <h2>Devya Shafa</h2>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#tentang">Tentang Saya</a></li>
+        <li><a href="#hard">Hard Skills</a></li>
+        <li><a href="#soft">Soft Skills</a></li>
+        <li><a href="#project">Project Saya</a></li>
+      </ul>
+    </nav>
+
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-images">
+        <img src="fto.jpg" />
+      </div>
+      <div class="hero-text">
+        <h1>Devya Shafa Anindya</h1>
+        <button onclick="window.open('https://wa.me/6285806754852', '_blank')">
+  hubungi
+</button>
+
+        </button>
+      </div>
+    </section>
+
+    <!-- GRID UTAMA -->
+    <section class="container">
+      <!-- Tentang -->
+      <div class="card tentang" id="tentang">
+        <h2 class="judul-tentang">
+          <img src="goodbye.png" class="icon-tentang" />
+          Tentang Saya
+        </h2>
+
+        <p style="margin-top: 15px">
+          Halo! Namaku Devya Shafa Anindya. Aku seorang siswi di SMKN 1
+          Purwosari - Rekayasa Perangkat Lunak.
+        </p>
+
+        <div class="info-grid">
+          <div class="info-box">
+            <img src="klndr.png" class="icon-info" />
+            16 Tahun
+          </div>
+
+          <div class="info-box">
+            <img src="pend.png" class="icon-info" />
+            SMKN 1 Purwosari
+          </div>
+
+          <div class="info-box">
+            <img src="loc.png" class="icon-info" />
+            Dayurejo, Prigen
+          </div>
+
+          <div class="info-box">
+            <img src="ins.png" class="icon-info" />
+            depyaa_aaa
+          </div>
+        </div>
+      </div>
+
+      <!-- Hard Skills -->
+      <div class="card hard" id="hard">
+        <h2 class="judul-hard">
+          <img src="hearts.png" class="icon-judul-hard" />
+          Hard Skills
+        </h2>
+        <div style="margin-top: 20px">
+          <div class="skill">
+            <img src="python.png" class="icon-skill" />
+            Python
+          </div>
+
+          <div class="skill">
+            <img src="github.png" class="icon-skill" />
+            GitHub
+          </div>
+
+          <div class="skill">
+            <img src="figma.png" class="icon-skill" />
+            Figma
+          </div>
+
+          <div class="skill">
+            <img src="html.png" class="icon-skill" />
+            HTML
+          </div>
+
+          <div class="skill">
+            <img src="uml.png" class="icon-skill" />
+            Flowchart
+          </div>
+
+          <div class="skill">
+            <img src="js.png" class="icon-skill" />
+            JavaScript
+          </div>
+        </div>
+      </div>
+
+      <!-- Soft Skills -->
+      <div class="card soft" id="soft">
+        <h2 class="judul-soft">
+          <img src="hearts.png" class="icon-judul-soft" />
+          Soft Skills
+        </h2>
+
+        <div class="soft-grid">
+          <div class="soft-item">
+            <img src="krjsm.png" class="icon-soft" />
+            Kerja Sama Tim
+          </div>
+
+          <div class="soft-item">
+            <img src="bff.png" class="icon-soft" />
+            Komunikasi
+          </div>
+
+          <div class="soft-item">
+            <img src="jam.png" class="icon-soft" />
+            Manajemen Waktu
+          </div>
+
+          <div class="soft-item">
+            <img src="lamp.png" class="icon-soft" />
+            Berpikir Kritis
+          </div>
+        </div>
+      </div>
+
+      <!-- Project Kiri -->
+      <div class="card project1" id="project">
+        <h2 class="judul-project">
+          <img src="fame.png" class="icon-judul-project" />
+          Project
+        </h2>
+
+        <div class="project-grid">
+          <img src="web.png" alt="Project 1" />
+          <img src="kalkulator.png" alt="Project 2" />
+          <img src="gitft.png" alt="Project 3" />
+          <img src="artikel.png" alt="Project 4" />
+        </div>
+      </div>
+
+      <!-- Project Tengah -->
+      <div class="card project2">
+        <h2 class="judul-project">
+          <img src="blink.png" class="icon-judul-project" />
+          Project
+        </h2>
+  <div class="project-grid">
+    <img src="login.png" alt="Project 5" />
+    <img src="buatakn.png" alt="Project 6" />
+  </div>
+</div>
+
+
+
+      <!-- Penutup -->
+      <div class="card penutup">
+        <h2 class="judul-penutup">
+          <img src="star.png" class="icon-judul-penutup" />
+          Penutup
+        </h2>
+        <p style="margin-top: 15px">
+          Terima kasih telah mengunjungi web portofolio saya. Saya selalu
+          terbuka untuk belajar hal baru dan mengembangkan kemampuan di bidang
+          web design dan web development.
+        </p>
+
+  <!-- Foto di bawah -->
+  <div class="penutup-foto">
+    <img src="foto.jpg" alt="Devya Shafa" />
+  </div>
+</div>
+
+      </div>
+    </section>
+  </body>
+</html>

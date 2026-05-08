@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Portfolio Rossa</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              softBg: "#F4EDED",
+              primaryPink: "#C97C7C",
+              softPink: "#E7B6B6",
+              cardPink: "#F0CFCF",
+            },
+            fontFamily: {
+              serifCustom: ["Georgia", "serif"],
+            },
+          },
+        },
+      };
+    </script>
+  </head>
+
+  <body class="bg-softBg font-serifCustom text-primaryPink">
+    <div class="max-w-6xl mx-auto px-12 py-10">
+      <!-- NAVBAR -->
+      <div class="flex justify-between items-center mb-24">
+        <h1 class="text-2xl tracking-wide">RROSA.IS</h1>
+        <ul class="flex gap-12 text-lg">
+          <li>About</li>
+          <li>Hard Skill</li>
+          <li>Soft Skill</li>
+          <li>Project</li>
+        </ul>
+      </div>
+
+      <!-- HERO -->
+      <div class="flex items-center justify-between mb-32">
+        <div class="max-w-xl">
+          <h2 class="text-center italic text-xl mb-6">~ ROSSA ILMI SILVIA ~</h2>
+          <p class="leading-8 text-lg">
+            Aku adalah salah satu murid di smk favorit di daerah ku yaitu
+            “smknusa”. aku dari jurusan TY yaitu jurusan RPL, Aku asalnya dari
+            salah satu daerah dingin yaitu desa Bulukandang kecamatan Prigen
+            kabupaten Pasuruan.
+          </p>
+        </div>
+
+        <!-- GANTI NAMA FILE FOTO DI SINI -->
+        <img
+          src="rossaimut.jpeg"
+          class="w-72 h-72 object-cover rounded-3xl shadow-lg"
+        />
+      </div>
+
+      <!-- HARD SKILL -->
+      <div class="flex items-center gap-6 mb-16">
+        <div class="flex-1 h-[2px] bg-softPink"></div>
+        <h2 class="italic text-2xl">Hard Skill</h2>
+        <div class="flex-1 h-[2px] bg-softPink"></div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-10 mb-32">
+        <!-- PYTHON -->
+        <div
+          class="bg-cardPink border border-primaryPink rounded-3xl p-6 shadow-md flex gap-4 items-start"
+        >
+          <img src="phyton.png" class="w-12 h-12" />
+          <div>
+            <h3 class="font-semibold mb-2">Python</h3>
+            <p>
+              Python adalah bahasa pemrograman yang mudah dipelajari dan
+              digunakan untuk membuat berbagai aplikasi.
+            </p>
+          </div>
+        </div>
+
+        <!-- CSS -->
+        <div
+          class="bg-cardPink border border-primaryPink rounded-3xl p-6 shadow-md flex gap-4 items-start"
+        >
+          <img src="css.png" class="w-12 h-12" />
+          <div>
+            <h3 class="font-semibold mb-2">CSS</h3>
+            <p>CSS adalah bahasa untuk mengatur tampilan dan desain website.</p>
+          </div>
+        </div>
+
+        <!-- JS -->
+        <div
+          class="bg-cardPink border border-primaryPink rounded-3xl p-6 shadow-md flex gap-4 items-start"
+        >
+          <img src="js.png" class="w-12 h-12" />
+          <div>
+            <h3 class="font-semibold mb-2">JavaScript</h3>
+            <p>
+              JavaScript adalah bahasa pemrograman untuk membuat website
+              interaktif.
+            </p>
+          </div>
+        </div>
+
+        <!-- FIGMA -->
+        <div
+          class="bg-cardPink border border-primaryPink rounded-3xl p-6 shadow-md flex gap-4 items-start"
+        >
+          <img src="figma.png" class="w-12 h-12" />
+          <div>
+            <h3 class="font-semibold mb-2">Figma</h3>
+            <p>
+              Figma adalah alat desain untuk membuat tampilan UI/UX secara
+              online.
+            </p>
+          </div>
+        </div>
+
+        <!-- HTML -->
+        <div
+          class="bg-cardPink border border-primaryPink rounded-3xl p-6 shadow-md flex gap-4 items-start"
+        >
+          <img src="htmllogo.png" class="w-12 h-12" />
+          <div>
+            <h3 class="font-semibold mb-2">HTML</h3>
+            <p>HTML adalah bahasa untuk membuat struktur halaman website.</p>
+          </div>
+        </div>
+
+        <!-- GITHUB -->
+        <div
+          class="bg-cardPink border border-primaryPink rounded-3xl p-6 shadow-md flex gap-4 items-start"
+        >
+          <img src="github-logo.png" class="w-12 h-12" />
+          <div>
+            <h3 class="font-semibold mb-2">Github</h3>
+            <p>
+              Github adalah platform untuk menyimpan dan mengelola kode program
+              secara online.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- SOFT SKILL -->
+      <div class="flex items-center gap-6 mb-16">
+        <div class="flex-1 h-[2px] bg-softPink"></div>
+        <h2 class="italic text-2xl">Soft Skill</h2>
+        <div class="flex-1 h-[2px] bg-softPink"></div>
+      </div>
+
+      <div class="grid grid-cols-2 gap-8 mb-32">
+        <!-- ITEM 1 -->
+        <div
+          class="flex items-center gap-4 bg-cardPink border border-primaryPink rounded-full py-4 px-8"
+        >
+          <img src="dirisendiri.png" class="w-8 h-8 object-contain" />
+          <span>Disiplin & Bertanggung jawab</span>
+        </div>
+
+        <!-- ITEM 2 -->
+        <div
+          class="flex items-center gap-4 bg-cardPink border border-primaryPink rounded-full py-4 px-8"
+        >
+          <img src="ceklis.png" class="w-8 h-8 object-contain" />
+          <span>Mampu menyesuaikan lingkungan baru</span>
+        </div>
+
+        <!-- ITEM 3 -->
+        <div
+          class="flex items-center gap-4 bg-cardPink border border-primaryPink rounded-full py-4 px-8"
+        >
+          <img src="ceklis.png" class="w-8 h-8 object-contain" />
+          <span>Mampu bekerja sama dalam tim</span>
+        </div>
+
+        <!-- ITEM 4 -->
+        <div
+          class="flex items-center gap-4 bg-cardPink border border-primaryPink rounded-full py-4 px-8"
+        >
+          <img src="emoji.png" class="w-8 h-8 object-contain" />
+          <span>Mampu mengontrol ekspresi</span>
+        </div>
+
+        <!-- ITEM 5 -->
+        <div
+          class="flex items-center gap-4 bg-cardPink border border-primaryPink rounded-full py-4 px-8"
+        >
+          <img src="chat.png" class="w-8 h-8 object-contain" />
+          <span>Mampu berkomunikasi dengan orang baru</span>
+        </div>
+
+        <!-- ITEM 6 -->
+        <div
+          class="flex items-center gap-4 bg-cardPink border border-primaryPink rounded-full py-4 px-8"
+        >
+          <img src="bookcase.png" class="w-8 h-8 object-contain" />
+          <span>Mampu mempelajari hal baru</span>
+        </div>
+
+        <!-- ITEM 7 -->
+        <div
+          class="flex items-center gap-4 bg-cardPink border border-primaryPink rounded-full py-4 px-8"
+        >
+          <img src="jam.png" class="w-8 h-8 object-contain" />
+          <span>Manajemen waktu yang baik</span>
+        </div>
+
+        <!-- ITEM 8 -->
+        <div
+          class="flex items-center gap-4 bg-cardPink border border-primaryPink rounded-full py-4 px-8"
+        >
+          <img src="soft8.png" class="w-8 h-8 object-contain" />
+          <span>Mampu bersosialisasi dengan cepat</span>
+        </div>
+      </div>
+
+      <!-- PROJECT -->
+      <div class="flex items-center gap-6 mb-16">
+        <div class="flex-1 h-[2px] bg-softPink"></div>
+        <h2 class="italic text-2xl">Project</h2>
+        <div class="flex-1 h-[2px] bg-softPink"></div>
+      </div>
+
+      <div class="grid grid-cols-3 gap-12 mb-32">
+        <!-- PROJECT 1 -->
+        <div
+          class="bg-cardPink border border-primaryPink rounded-3xl p-6 text-center"
+        >
+          <img
+            src="webweb.png"
+            class="h-40 w-full object-cover rounded-xl mb-4"
+          />
+          <button class="bg-primaryPink text-white px-6 py-2 rounded-full">
+            Website
+          </button>
+        </div>
+
+        <!-- PROJECT 2 -->
+        <div
+          class="bg-cardPink border border-primaryPink rounded-3xl p-6 text-center"
+        >
+          <img
+            src="sgweb.png"
+            class="h-40 w-full object-cover rounded-xl mb-4"
+          />
+          <button class="bg-primaryPink text-white px-6 py-2 rounded-full">
+            Sign Up
+          </button>
+        </div>
+
+        <!-- PROJECT 3 -->
+        <div
+          class="bg-cardPink border border-primaryPink rounded-3xl p-6 text-center"
+        >
+          <img
+            src="lgweb.png"
+            class="h-40 w-full object-cover rounded-xl mb-4"
+          />
+          <button class="bg-primaryPink text-white px-6 py-2 rounded-full">
+            Log In
+          </button>
+        </div>
+
+        <!-- PROJECT 4 -->
+        <div
+          class="bg-cardPink border border-primaryPink rounded-3xl p-6 text-center"
+        >
+          <img
+            src="piramidweb.png"
+            class="h-40 w-full object-cover rounded-xl mb-4"
+          />
+          <button class="bg-primaryPink text-white px-6 py-2 rounded-full">
+            Personal Project
+          </button>
+        </div>
+
+        <!-- PROJECT 5 -->
+        <div
+          class="bg-cardPink border border-primaryPink rounded-3xl p-6 text-center"
+        >
+          <img
+            src="websdrweb.png"
+            class="h-40 w-full object-cover rounded-xl mb-4"
+          />
+          <button class="bg-primaryPink text-white px-6 py-2 rounded-full">
+            Web Sederhana
+          </button>
+        </div>
+
+        <!-- PROJECT 6 -->
+        <div
+          class="bg-cardPink border border-primaryPink rounded-3xl p-6 text-center"
+        >
+          <img
+            src="perkalianweb.png"
+            class="h-40 w-full object-cover rounded-xl mb-4"
+          />
+          <button class="bg-primaryPink text-white px-6 py-2 rounded-full">
+            Tabel Produk
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- THANK YOU -->
+    <div class="flex items-center gap-3 mb-10">
+      <div class="flex-1 h-[2px] bg-softPink"></div>
+      <h2 class="italic text-2xl">Thank You</h2>
+      <div class="flex-1 h-[2px] bg-softPink"></div>
+    </div>
+
+    <div
+      class="bg-softPink py-10 rounded-2xl grid grid-cols-2 gap-10 shadow-xl mb-20"
+    >
+      <!-- KIRI -->
+      <div
+        class="bg-primaryPink text-white p-10 rounded-3xl flex flex-col justify-center"
+      >
+        <p class="leading-7">
+          Terima kasih telah meluangkan waktu untuk melihat portfolio saya.
+          Portfolio ini saya susun sebagai gambaran mengenai minat, kemampuan,
+          dan pengalaman yang saya miliki.
+        </p>
+      </div>
+
+      <!-- KANAN -->
+      <div
+        class="bg-primaryPink text-white p-10 rounded-3xl flex flex-col justify-center items-center text-center"
+      >
+        <h3 class="italic text-xl mb-4">Terima Kasih</h3>
+        <p class="leading-7">
+          Terima Kasih Ucapan ini saya tunjukkan kepada seseorang yang berperan
+          penting gi hidup saya terutama kepada kedua orang tu saya. Ayah Ibu
+          terima kasih telah memfasilitasi keperluan sekolah aku, terima kasih
+          telah menjadi orang tua ku. kepada Bapak Wildan terima kasih telah
+          membimbing saya sejauh ini, telah memberi materi untuk saya. Saya
+          sangat berterima kasih kepada kalian semua. tanpa kalian saya gatau
+          bakalan jadi apa saya sekarang.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
